@@ -1,6 +1,7 @@
 <template>
   <EditorToolbarBox :text="$t('toolbar.file.title')" icon="i-carbon:import-export">
     <EditorToolbarFileSave />
+    <EditorToolbarFileResetCSS />
     <EditorToolbarFileRename />
 
     <hr border-dashed my-2 />

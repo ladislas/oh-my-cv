@@ -145,6 +145,15 @@ ${PREVIEW_SELECTOR} dl {
   margin: 0;
 }
 
+/* Fonts */
+
+${PREVIEW_SELECTOR} p,
+${PREVIEW_SELECTOR} li,
+${PREVIEW_SELECTOR} dl {
+  font-family: "SF Pro Text";
+  font-weight: 300;
+}
+
 /* Headings */
 
 ${PREVIEW_SELECTOR} h1,
@@ -159,13 +168,15 @@ ${PREVIEW_SELECTOR} h1 {
 
 ${PREVIEW_SELECTOR} h2,
 ${PREVIEW_SELECTOR} h3 {
-  margin-bottom: 5px;
+  margin-bottom: 0.5em;
+  padding-top: 1em;
   font-size: 1.2em;
 }
 
 ${PREVIEW_SELECTOR} h2 {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom-style: inset;
+  border-color: #CBE2E9;
+  border-bottom-width: 2px;
 }
 
 /* Lists */
@@ -213,8 +224,8 @@ ${PREVIEW_SELECTOR} img {
 
 ${PREVIEW_SELECTOR} .profile-picture {
   position: fixed;
-  top: 1em;
-  right: 1em;
+  top: 2em;
+  right: 2em;
   width: 120px;
   height: auto;
   border-radius: 50%;

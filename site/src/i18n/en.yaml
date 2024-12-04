@@ -35,6 +35,7 @@ toolbar:
     title: File
     save: Save
     rename: Rename
+    reset_css: Reset CSS
     import:
       trigger: Import Markdown
       dialog:

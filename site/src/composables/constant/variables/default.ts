@@ -211,6 +211,18 @@ ${PREVIEW_SELECTOR} img {
   max-width: 100%;
 }
 
+${PREVIEW_SELECTOR} .profile-picture {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Header */
 
 ${PREVIEW_SELECTOR} .resume-header {

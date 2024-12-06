@@ -1,0 +1,158 @@
+/* Backbone CSS for Resume Template 1 */
+
+/* Basic */
+
+__PREVIEW_SELECTOR__ [data-scope="vue-smart-pages"][data-part="page"] {
+  background-color: white;
+  color: black;
+  text-align: justify;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+__PREVIEW_SELECTOR__ p,
+__PREVIEW_SELECTOR__ li,
+__PREVIEW_SELECTOR__ dl {
+  margin: 0;
+}
+
+/* Fonts */
+
+__PREVIEW_SELECTOR__ p,
+__PREVIEW_SELECTOR__ li,
+__PREVIEW_SELECTOR__ dl {
+  font-family: "SF Pro Text";
+  font-weight: 300;
+}
+
+/* Headings */
+
+__PREVIEW_SELECTOR__ h1,
+__PREVIEW_SELECTOR__ h2,
+__PREVIEW_SELECTOR__ h3 {
+  font-weight: bold;
+}
+
+__PREVIEW_SELECTOR__ h1 {
+  font-size: 2.13em;
+}
+
+__PREVIEW_SELECTOR__ h2,
+__PREVIEW_SELECTOR__ h3 {
+  margin-bottom: 0.5em;
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+
+__PREVIEW_SELECTOR__ h2 {
+  border-bottom-style: inset;
+  border-color: #CBE2E9;
+  border-bottom-width: 2px;
+}
+
+/* Lists */
+
+__PREVIEW_SELECTOR__ ul,
+__PREVIEW_SELECTOR__ ol {
+  padding-left: 1.5em;
+  margin: 0.2em 0;
+}
+
+__PREVIEW_SELECTOR__ ul {
+  list-style-type: circle;
+}
+
+__PREVIEW_SELECTOR__ ol {
+  list-style-type: decimal;
+}
+
+/* Definition Lists */
+
+__PREVIEW_SELECTOR__ dl {
+  display: flex;
+}
+
+__PREVIEW_SELECTOR__ dl dt,
+__PREVIEW_SELECTOR__ dl dd:not(:last-child) {
+  flex: 1;
+}
+
+/* Tex */
+
+__PREVIEW_SELECTOR__ :not(span.katex-display) > span.katex {
+  font-size: 1em !important;
+}
+
+/* SVG & Images */
+
+__PREVIEW_SELECTOR__ svg.iconify {
+  vertical-align: -0.2em;
+}
+
+__PREVIEW_SELECTOR__ img {
+  max-width: 100%;
+}
+
+__PREVIEW_SELECTOR__ .profile-picture {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+
+__PREVIEW_SELECTOR__ .resume-header {
+  text-align: center;
+}
+
+__PREVIEW_SELECTOR__ .resume-header h1 {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+__PREVIEW_SELECTOR__ .resume-header-item:not(.no-separator)::after {
+  content: " | ";
+}
+
+/* Citations */
+
+__PREVIEW_SELECTOR__ [data-scope="cross-ref"][data-part="definitions"] {
+  padding-left: 1.2em;
+}
+
+__PREVIEW_SELECTOR__ [data-scope="cross-ref"][data-part="definition"] p {
+  margin-left: 0.5em;
+}
+
+__PREVIEW_SELECTOR__ [data-scope="cross-ref"][data-part="definition"]::marker {
+  content: attr(data-label);
+}
+
+__PREVIEW_SELECTOR__ [data-scope="cross-ref"][data-part="reference"] {
+  font-size: 100%;
+  top: 0;
+}
+
+/* Dark & print mode */
+/* You might want to comment out the following lines if you change the background or text color. */
+
+.dark __PREVIEW_SELECTOR__ [data-scope="vue-smart-pages"][data-part="page"] {
+  background-color: hsl(213, 12%, 15%);
+  color: hsl(216, 12%, 84%);
+}
+
+@media print {
+  .dark __PREVIEW_SELECTOR__ [data-scope="vue-smart-pages"][data-part="page"] {
+    background-color: white;
+    color: black;
+  }
+}

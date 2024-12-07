@@ -143,6 +143,27 @@ export class StorageService {
     }
   }
 
+  public nowTimeStamp(): string {
+    const now = new Date();
+
+    const year = now.getFullYear();
+
+    // Months are zero-indexed in JavaScript, so add 1 and pad with zero if needed
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+
+    // Get the day of the month and pad with zero if needed
+    const day = String(now.getDate()).padStart(2, "0");
+
+    // Get the hours and pad with zero if needed
+    const hours = String(now.getHours()).padStart(2, "0");
+
+    // Get the minutes and pad with zero if needed
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+
+    // Combine all parts with underscores
+    return `${year}_${month}_${day}_${hours}${minutes}`;
+  }
+
   public async exportToJSON() {
     const data = (await this.getResumes()).reduce((acc, { id, ...resume }) => {
       acc[id] = resume;
@@ -154,7 +175,9 @@ export class StorageService {
       data
     };
 
-    downloadFile("ohmycv_data.json", JSON.stringify(json));
+    const now = this.nowTimeStamp();
+
+    downloadFile(`${now}-ohmycv_data.json`, JSON.stringify(json));
   }
 
   /**
